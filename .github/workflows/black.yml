@@ -10,7 +10,7 @@ jobs:
         uses: rickstaa/action-black@v1
         id: action_black
         with:
-          black_args: "--check --line-length 120 --experimental-string-processing"
+          black_args: "--line-length 120 --experimental-string-processing"
       - name: Create Pull Request
         if: steps.action_black.outputs.is_formatted == 'true'
         uses: peter-evans/create-pull-request@v6
